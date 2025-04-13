@@ -13,13 +13,13 @@ Aplikasi ini merupakan aplikasi flutter sederhana yang terdiri dari 3 halaman, y
 ## Screenshots Halaman
 
 ### Halaman Counter
-![Counter](screenshots/counter.png)
+<img src="screenshots/counter.png" width="300">
 
 ### Halaman API
-![API](screenshots/daftar_negara.png)
+<img src="screenshots/daftar_negara.png" width="300">
 
 ### Halaman Profil
-![Profil](screenshots/profile.png)
+<img src="screenshots/profile.png" width="300">
 
 ## Penjelasan Tiap Halaman
 - **Halaman Counter:** Halaman ini berisi counter sederhana yang terdiri dari button plus dan minus, ketika button plus ditekan maka counter akan bertambah, begitu pun sebaliknya.
