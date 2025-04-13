@@ -13,24 +13,24 @@ class HalamanProfile extends StatelessWidget {
           child: Column(
             children: const [
               ProfileCard(
-                imagePath: 'images/Jimly.JPG',
-                nama: 'Jimly Assidiq Anwar',
-                npm: '4522210003',
+                imagePath: 'assets/images/Jimly.JPG',
+                nama: 'Jimly Asidiq Anwar',
+                ttl: 'Bekasi, 1 Juni 2004',
                 alamat: 'Depok',
               ),
               SizedBox(height: 20),
               ProfileCard(
-                imagePath: 'images/farhan.jpg',
+                imagePath: 'assets/images/farhan.jpg',
                 nama: 'Muhamad Farhan',
-                npm: '4522210057',
+                ttl: 'Depok, 1 Februari 2002',
                 alamat: 'Depok',
               ),
               SizedBox(height: 20),
               ProfileCard(
-                imagePath: 'images/galih.png',
+                imagePath: 'assets/images/galih.png',
                 nama: 'Rizky Galih Dwiyanto',
-                npm: '4522210074',
-                alamat: 'Depok',
+                ttl: 'Bogor, 23 September 2003',
+                alamat: 'Cibinong',
               ),
             ],
           ),
@@ -43,14 +43,14 @@ class HalamanProfile extends StatelessWidget {
 class ProfileCard extends StatelessWidget {
   final String imagePath;
   final String nama;
-  final String npm;
+  final String ttl;
   final String alamat;
 
   const ProfileCard({
     super.key,
     required this.imagePath,
     required this.nama,
-    required this.npm,
+    required this.ttl,
     required this.alamat,
   });
 
@@ -65,16 +65,20 @@ class ProfileCard extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 60,
-                backgroundImage: AssetImage(imagePath),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: SizedBox(
+                  width: 220,
+                  height: 160,
+                  child: Image.asset(imagePath, fit: BoxFit.cover),
+                ),
               ),
               const SizedBox(height: 16),
               Text('Nama', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               Text(nama, style: TextStyle(fontSize: 18)),
               const SizedBox(height: 12),
-              Text('NPM', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-              Text(npm, style: TextStyle(fontSize: 18)),
+              Text('Tempat & Tanggal Lahir', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              Text(ttl, style: TextStyle(fontSize: 18)),
               const SizedBox(height: 12),
               Text('Alamat', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               Text(alamat, style: TextStyle(fontSize: 18)),

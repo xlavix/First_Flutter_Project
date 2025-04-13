@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/halaman_utama.dart';
 import 'pages/halaman_daftar_negara.dart';
 import 'pages/halaman_profile.dart';
 
@@ -34,11 +35,13 @@ class _NavigasiBawahState extends State<NavigasiBawah> {
   int _selectedIndex = 0;
 
   final List<Widget> _halaman = [
+    HalamanUtama(),
     HalamanDaftarNegara(),
     HalamanProfile(),
   ];
 
   final List<String> _judulHalaman = [
+    'Beranda',
     'Daftar Negara',
     'Profile',
   ];
@@ -50,6 +53,7 @@ class _NavigasiBawahState extends State<NavigasiBawah> {
   }
 
   final List<BottomNavigationBarItem> _navItems = const [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
     BottomNavigationBarItem(icon: Icon(Icons.flag), label: 'Negara'),
     BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
   ];
